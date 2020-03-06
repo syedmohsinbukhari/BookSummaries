@@ -728,17 +728,135 @@ Boiled Frogs
 
 ### 3.5. Debugging
 
+**Note**: _From this section onwards, I switched to the second edition of the book. I re-read the chapters/sections above from the second edition and made changes where necessary. However, from here on, there will be minor differences in formatting of notes to better suit the new edition._
+
+* A moth caught in a relay in an early computer system, originated the term *computer bug*
+
+#### Psychology of Debugging
+
+* Debugging is a sensitive, emotional subject for many developers
+
+* Instead of attacking it as a puzzle to solved
+
+* You may encounter denial, finger pointing, lame excuses, or just plain apathy
+
+* Embrace the fact that debugging is just *problem solving*
+
 * **_Fix the problem, not the blame (Tip 29)_**
+
+* It doesn't matter who was responsible for the bug
+
+#### A Dugging Mindset
+
+* Before debugging tune out all the project pressure due to deadlines
+
+* Turn off many defenses that you use each day to protect your ego
 
 * **_Don’t panic (Tip 30)_**
 
+* It is very important to step back a pace and *think* about the symptoms
+
+* If your reaction to a bug report is "that's impossible", you are plainly wrong
+
+* Don't fix symptoms, fix the root cause and fix other problems along the way
+
+#### Where to Start
+
+* Start with a cleanly built (without warnings) code before finding a logical bug
+
+* Set compiler warnings as high as possible to focus on harder problems at hand
+
+* Gather all relevant data, and be accurate in data gathering
+
+* Bug reporting is not an exact science
+
+* Interview the user who reported the bug to gather more data
+
+* Artificial tests don't exercise enough of an application
+
+* Brutally test both boundary conditions and realistic end-user usage patterns
+
+* You need to do this systematically (see [_Ruthless and Continuous Testing_](#ruthless-and-continuous-testing))
+
+#### Debugging Strategies
+
+* *Once you* think you know what is going on
+
+  * It's time to find out what the program thinks is going on
+
+  * Reproduce bugs
+
+* Write test cases that isolate the bug, no need to follow 15 steps to reproduce it
+
+* The act of writing test informs the solution
+
 * **_Failing test before fixing code (Tip 31)_**
+
+#### Coder in a Strange Land
+
+* Many developers dive straight into code without reading the Exception message
 
 * **_Read the damn error message (Tip 32)_**
 
+* What if it is not a crash? What if it is just a bad result?
+
+* Observe the variable values in the debugger as you move along
+
+* Make sure you know how to move up and down the call stack
+
+* Keep a paper and a pen to jot down where you started the bug chase
+
+* To test senstivity to input values, feed data to a local deployment of app
+
+  * Make sure it still crashes
+
+  * [Binary chop](#the-binary-chop) the data until you isolate exactly which input values are problematic
+
+* A previously working code crashed on you? Time for [binary chop](#the-binary-chop)!
+
+#### The Binary Chop
+
+* It's also sometimes called _Binary Search_
+
+* For debugging, use the binary chop on _Stack Trace_ and/or datasets
+
+* Revert to previously working releases using version control and compare stacks
+
+* _Tracing statements_ are little messages like `I am here` and `value of x=2`
+
+* _Tracing statements_ should be in a regular, consistent format for automatic parsing
+
+  * To track down resource leaks, you can count the number of `open` and `close` commands
+
+* Explain your problems to a rubber duck, to get a solution
+
+  * While explaining, you might find the solution yourself
+
+* Always assume first that the 3rd party libarary/OS is not broken even if it is
+
+* A senior developer was convinced that `select` is broken, however, it wasn't
+
 * **_"select" isn’t broken (Tip 33)_**
 
+* If you made a little change and the app crashed, it is probably that little change
+
+* If you are surprised by a bug, re-evaluate your truths
+
+* The amount of surprise is directly proportional to the amount of trust and faith
+
 * **_Don’t assume it - Prove it (Tip 34)_**
+
+* Whatever happened, make sure you know if it happens again
+
+* If it took a long time to find the bug, find out why and fix this
+
+  * Use better testing hooks
+
+  * Write a log file analyzer
+
+* If bug arose due to one person's wrong assumption
+
+  * Discuss this with team, maybe more people have the same assumption
 
 ### 3.6. Text Manipulation
 
@@ -813,6 +931,8 @@ Boiled Frogs
 ### 9.2. Coconuts Don’t Cut It
 
 ### 9.3. Pragmatic Starter Kit
+
+#### Ruthless and Continuous Testing
 
 ### 9.4. Delight Your Users
 
