@@ -860,7 +860,55 @@ Boiled Frogs
 
 ### 3.6. Text Manipulation
 
+* It takes time to master tools
+
+* For shell users there are tools like `awk` and `sed` for faster scripting
+
+* Using Python and Ruby can help you quickly hack up solutions
+
+* Scripting languages can increase the rate of experimentation by 5 to 10 times
+
+* _**Learn a Text Manipulation Language (Tip 35)**_
+
+* Wide ranging applications of _Text Manipulation Languages_
+
+  * Building the Book (generate PDFs, ebooks, etc)
+
+  * Code inclusion and highlighting (inject code into book automatically from repos)
+
+  * Website update (extraction of table of contents and injected into website)
+
+  * Including equations (LaTeX math to nicely formatted text for the book)
+
+  * Index generation (Indexes are marked up in text and then collated and formatted)
+
+* Keeping things in text will bring a whole host of benefits
+
 ### 3.7. Engineering Daybooks
+
+* Keep a daybook to:
+
+  * Jot down what you are working on
+
+  * Note variable values while debugging
+
+  * Leave reminders where we put things
+
+  * Record wild ideas
+
+  * Sometimes just doodle (doodling helps focus and improves cognitive abilities)
+
+* Advantages of keeping a daybook:
+
+  * It is more reliable than (human) memory
+
+  * It gives you a place to store ideas to work on later and focus on task at hand
+
+  * It acts as a rubber duck, and helps you reflect your ideas and highlight mistakes
+
+* Use paper, not a file or a wiki
+
+* Wait a month and see the benefits
 
 ## 4. Pragmatic Paranoia
 
