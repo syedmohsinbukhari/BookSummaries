@@ -868,7 +868,7 @@ Boiled Frogs
 
 * Scripting languages can increase the rate of experimentation by 5 to 10 times
 
-* _**Learn a Text Manipulation Language (Tip 35)**_
+* **_Learn a Text Manipulation Language (Tip 35)_**
 
 * Wide ranging applications of _Text Manipulation Languages_
 
@@ -912,15 +912,102 @@ Boiled Frogs
 
 ## 4. Pragmatic Paranoia
 
+* **_You Can't Write Perfect Software (Tip 36)_**
+
+* Did that hurt? It shouldn't! It is an axiom of life
+
+* We can turn this to advantage
+
+* We never put ourselves in a position from which we can't extricate ourselves
+
+* We don't trust data and put assertions, look out for attackers etc
+
+* Pragmatic Programmers take this a step further and don't trust themselves either
+
+* Knowing that no one writes perfect code, build defenses against your own mistakes
+
 ### 4.1. Design by Contract
+
+* > _Nothing astonishes men so much as common sense and plain dealing._
+  > _--- Ralph Waldo Emerson, Essays_
+
+* Clients and suppliers must agree on rights and responsibilities
+
+* Dealing with computer systems is hard
+
+  * Dealing with people is even harder
+
+* But we have more data on how to deal with people since computers are newer
+
+* One of the best solution for ensuring plain dealing is _contract_
+
+* A contract defines your rights and responsibilities as well as of the other party
+
+* In addition, there is an agreement concerning reprecursions
+
+* Contract is an idea used over the world - both formally and informally - to help humans interact
+
+* Same can be done to help software modules interact
+
+* There are three parts of a DBC:
+
+  * Preconditions: Caller of a routine is responsible for satisfying preconditions
+
+  * Postconditions: The responsible routine must guarantee postconditions
+
+  * Class invariants: These must hold true after the routine has finished
+
+* If all the preconditions are met by the caller
+
+  * The routine shall guarantee that all postconditions and invariants will be true
+
+* If either party fails, a predecided remedy is invoked - maybe an exception or termination
+
+* Failure to live upto the contract is a bug
+
+* **_Design With Contracts (Tip 37)_**
+
+* Write lazy code, accept specific inputs and output specific things
+
+* DBC is needed even in a world of Test Driven Development
+
+* In languages that do not have built-in DBC, you can code it in unit-tests
+
+* Use assertions to partially implement DBC
+
+  * It is partial because in OOP assertions are not automatically inherited
+
+* It is mostly on code boundaries that most contract violation problems are detected
+
+* DBC and Crashing Early
+
+  * For e.g. `sqrt` function should crash if a _-ve_ number is given
+
+* Semantic invariants are kind of a _philosophical contract_
+
+  * The system is designed around these
+
+* Sometimes software can update its contract at runtime, for e.g.
+
+  * On recieving an invalid input, it might say
+
+    * "I don't accept this, but if you give me that I might give you something else"
 
 ### 4.2. Dead Programs Tell No Lies
 
+* Check things often and terminate the program if things go awry
+
 ### 4.3. Assertive Programming
+
+* Write code that actively verifies your assumptions by checking along the way
 
 ### 4.4. How to Balance Resources
 
+* As programs get more dynamic, system resources will be juggled
+
 ### 4.5. Don’t Outrun Your Headlights
+
+* We stick to small steps so we don't fall off the edge of they cliff
 
 ## 5. Bend or Break
 
