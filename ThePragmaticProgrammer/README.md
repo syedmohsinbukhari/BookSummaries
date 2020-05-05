@@ -52,7 +52,7 @@ Notes by Syed Mohsin Bukhari
 
 * People have a tendency to keep clean things clean
 
-* People have a tendency to not ignore cleanliness when things are already not clean
+* People have a tendency to ignore cleanliness when things are already not clean
 
 * Do this even in case of emergencies (fires, deadlines, etc)
 
