@@ -596,7 +596,7 @@ Boiled Frogs
 
 * Windows CLI utilities are inferior to their UNIX counterparts, however, all is not lost
 
-* Cygnus Solutions has a package, Cygwin with provides UNIX utilities in windows
+* Cygnus Solutions has a package, Cygwin which provides UNIX utilities in Windows
 
 * Some utilities don’t work as expected in Windows
 
