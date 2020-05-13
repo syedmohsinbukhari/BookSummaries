@@ -710,7 +710,7 @@ Boiled Frogs
 
   * The list of software installed
 
-* It helps with builds that are *automatic *and *repeatable*
+* It helps with builds that are *automatic* and *repeatable*
 
 * Testing can be automated with every change
 
