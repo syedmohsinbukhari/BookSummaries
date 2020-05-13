@@ -995,7 +995,15 @@ Boiled Frogs
 
 ### 4.2. Dead Programs Tell No Lies
 
+* If there is an error, something very, very bad has happened
+
+* Do not catch the exception and re-raise, let the exceptions automatically propagate
+
+* **_Crash Early (Tip 38)_**
+
 * Check things often and terminate the program if things go awry
+
+* A dead program normally does a lot less damage than a crippled one
 
 ### 4.3. Assertive Programming
 
